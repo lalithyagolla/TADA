@@ -12,7 +12,7 @@ const ExpenseForm = ({ onAdd }) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const res = await axios.post('http://localhost:5000/api/expenses', form);
+    const res = await axios.post('https://tada-backend-zkpy.onrender.com', form);
     onAdd(res.data);
     setForm({ date: '', description: '', amount: '', type: 'TA' });
   };
