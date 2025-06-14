@@ -7,7 +7,7 @@ const App = () => {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
-    axios.get('https://tada-backend-zkpy.onrender.com')
+    axios.get('http://localhost:5000/api/expenses')
       .then(res => setExpenses(res.data));
   }, []);
 
